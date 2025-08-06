@@ -20,6 +20,7 @@ jobs:
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
           haxelib install lime --quiet
+          haxelib install flixel --quiet
 
       - name: Compile (Crash Handler)
         run: cd crshhndlr && haxelib run lime build windows
