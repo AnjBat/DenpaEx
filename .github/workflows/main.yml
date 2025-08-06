@@ -15,12 +15,19 @@ jobs:
         with:
           haxe-version: 4.3.6
 
-      - name: Install Libraries
+      - name: Install All Required Libraries
         run: |
           haxelib install hmm --quiet
           haxelib run hmm install --quiet
           haxelib install lime --quiet
+          haxelib install openfl --quiet
           haxelib install flixel --quiet
+          haxelib install flixel-addons --quiet
+          haxelib install flixel-ui --quiet
+          haxelib install hxcpp --quiet
+          haxelib install actuate --quiet
+          haxelib install hscript --quiet
+          haxelib install hxjsonast --quiet
 
       - name: Compile (Crash Handler)
         run: cd crshhndlr && haxelib run lime build windows
